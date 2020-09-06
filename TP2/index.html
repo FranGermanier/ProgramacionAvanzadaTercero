@@ -1,21 +1,54 @@
 <html>
     <head>
+        <!-- SweetAlert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <title>
-            Pagina con Javascript
+            Trabajo Practico 2
         </title>
     </head>
     <body>
         <!-- Ejercicio 1 -->
-        <script src="ejercicio 1.js"></script>
+        <!-- <h3>Ejercicio 1</h3>
+        <script src="ejercicio 1.js"></script> -->
         <!-- Ejercicio 2 -->
-        <script src="ejercicio 2.js"></script>
-        <br>
-        <!-- TABLA PARA EL EJERCICIO 2 -->
-        <h1>Ejercicio 2 top 10 de artistas</h1>
-        <table BORDER=1 WIDTH="50%" ALIGN=CENTER id=table>
+        <!-- <h3>Ejercicio 2</h3>
+        <table BORDER=1 WIDTH="50%" ALIGN=LEFT id=table>
         </table>
-        <!-- FIN TABLA PARA EL EJERCICIO 2 -->
-        <br>
-        
+        <script src="ejercicio 2.js"></script> -->
+        <!-- Ejercicio 3 -->
+        <script src="ejercicio 3.js"></script>
+        <h3> Ejercicio 3 </h3>
+        <!-- Formulario -->
+          <form id="formulario">
+              <div class="form-row">
+                <div class="form-group col-md-5">
+                  <label for="inputNombre">Nombre</label>
+                  <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese su Nombre">
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="inputApellido">Apellido</label>
+                  <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese su Apellido">
+                </div>
+              </div>
+              <div class="form-row">
+                  <div class="form-group col-md-5">
+                      <label for="inputDireccion">Dirección</label>
+                      <input type="text" class="form-control" id="inputDireccion" placeholder="Calle ejemplo 1234">
+                  </div>
+                  <div class="form-group col-md-5">
+                      <label for="inputTelefono">Telefono</label>
+                      <input type="number" class="form-control" id="inputTelefono" placeholder="12345678">
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Correo</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Ejemplo@gmail.com">
+              </div>
+              <button type="button" class="btn btn-primary" onClick="formulario.onsubmit()">Enviar</button>
+              <button type="button" class="btn btn-primary" onClick="cancelar()">Cancelar</button>
+            </form>
+        <!-- Fin Formulario   -->
     </body>
 </html>
