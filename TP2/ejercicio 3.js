@@ -1,22 +1,3 @@
-function alerta(){
-    swal({
-        title: "Datos incompletos",
-        text: "Por favor ingrese su nombre",
-        icon: "warning",
-      });
-}
-
-const nombre = document.getElementById("inputNombre");
-const apellido = document.getElementById("inputApellido");
-const direccion = document.getElementById("inputDierccion");
-const telefono = document.getElementById("inputTelefono");
-const email = document.getElementById("inputEmail");
-const formulario = document.getElementById("formulario");
-let ver = false
-const prueba = "Hola"
-
-console.log(prueba.length)
-
 function cancelar(){
     swal ({
         title: "¿Seguro que desea cancelar?",
@@ -26,26 +7,27 @@ function cancelar(){
     })
 }
 
-function comprobarDato(dato, veri){
-    if (dato == null){
+function comprobarDato(dato){
+    if (dato == ""){
         swal({
             title: "Datos incompletos",
             text: "Por favor revise sus datos",
             icon: "warning",
           });
-        veri = false
+        return false
         console.log("entro al if")
     } else {
-        veri = true
-        console.log("no entro al if")
+        return true
     }
 }
 
-formulario.onsubmit = function(){
-    comprobarDato(nombre.value, ver)
-    console.log(ver)
-    console.log(nombre)
-    if (ver == true){
+function comprobar(){
+    const nombre = document.getElementById("inputNombre").value;
+    const apellido = document.getElementById("inputApellido").value;
+    const direccion = document.getElementById("inputDireccion").value;
+    const telefono = document.getElementById("inputTelefono").value;
+    const email = document.getElementById("inputEmail").value;
+    if (comprobarDato(nombre) && comprobarDato(apellido) && comprobarDato(direccion) && comprobarDato(telefono) && comprobarDato(email)){
         swal({
             title: "Bien hecho ",
             text: "Datos completados con exito",
@@ -53,5 +35,3 @@ formulario.onsubmit = function(){
           }); 
     }
 }
-
-formulario.onsubmit()
